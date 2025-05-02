@@ -41,6 +41,26 @@ module.exports = {
         ],
         "newlines-between": "always"
       }
-    ]
+    ],
+    "no-console": "warn",
+    "no-debugger": "warn",
+    "no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "args": "after-used",
+        "ignoreRestSiblings": false
+      }
+    ],
+    "consistent-return": "error",
+    "curly": ["error", "all"],
+    "eqeqeq": ["error", "always"],
+    "no-else-return": "error",
+    "no-empty-function": "error",
+    "no-multi-spaces": "error",
+    "no-trailing-spaces": "error",
+    "no-unreachable": "error",
+    "semi": ["error", "always"],
+    "quotes": ["error", "single", { "avoidEscape": true }]
   }
 };
