@@ -52,5 +52,20 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
   CMD curl -f http://localhost:4000/health || exit 1
 
+# Set up linting and prettier in CI pipeline
+RUN npm run lint
+RUN npm run prettier
+
+# Configure type checking in CI pipeline
+RUN npm run type-check
+
+# Add testing pipeline for frontend and backend
+RUN npm run test:frontend
+RUN npm run test:backend
+
+# Set up deployment workflows for frontend and backend
+RUN npm run deploy:frontend
+RUN npm run deploy:backend
+
 # Start the application
 CMD ["sh", "-c", "npm run start:frontend & npm run start:backend"]

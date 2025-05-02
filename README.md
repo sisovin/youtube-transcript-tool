@@ -79,3 +79,48 @@ A reusable input component.
 - Use the `main` branch for production-ready code.
 - Create feature branches for new features and bug fixes.
 - Example: `feature/add-user-endpoint`
+
+## Modules
+
+### Auth Module
+- [ ] Implement Argon2 password hashing
+- [ ] Create auth DTOs
+- [ ] Set up JWT strategy
+- [ ] Implement login/signup endpoints
+- [ ] Add session management
+
+### Transcript Module
+- [ ] Create YouTube API service
+- [ ] Implement transcript fetching logic
+- [ ] Set up transcript DTOs
+- [ ] Add caching mechanism
+- [ ] Create rate limiting
+
+### User Module
+- [ ] Implement user CRUD operations
+- [ ] Add profile management
+- [ ] Set up user-transcript relations
+
+### Shared Infrastructure
+- [ ] Create global exception filters
+- [ ] Set up request validation pipes
+- [ ] Implement logging interceptor
+- [ ] Configure API documentation (Swagger)
+
+## Database
+- [ ] Design PostgreSQL schema
+- [ ] Set up migrations
+- [ ] Implement seed script for development
+- [ ] Configure production database connection
+
+## CI/CD
+- [ ] Set up linting/prettier in pipeline
+- [ ] Configure type checking in CI
+- [ ] Add testing pipeline
+- [ ] Set up deployment workflows
+
+## Testing
+- [ ] Write unit tests for frontend components
+- [ ] Add integration tests for API
+- [ ] Implement E2E test suite
+- [ ] Set up mocking for YouTube API
