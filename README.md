@@ -1,126 +1,131 @@
 # YouTube Transcript Tool
 
-## Monorepo Setup
+The **YouTube Transcript Tool** is a powerful application designed to retrieve, manage, and analyze YouTube video transcripts. Whether you're a content creator, researcher, or just an avid YouTube viewer, this tool helps you access video transcripts and perform advanced operations like searching, editing, and exporting.
+
+## Table of Contents
+
+- [About the Project](#about-the-project)
+  - [Features](#features)
+  - [Tech Stack](#tech-stack)
+- [Installation](#installation)
+  - [Prerequisites](#prerequisites)
+  - [Setup Instructions](#setup-instructions)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Support and Community](#support-and-community)
+
+---
+
+## About the Project
+
+The YouTube Transcript Tool simplifies the process of working with video transcripts, making it easier to extract insights, create subtitles, or generate summaries. The tool supports both manual and automated workflows for transcript retrieval and processing.
+
+### Features
+
+- **Transcript Retrieval:** Automatically fetch transcripts from YouTube videos.  
+- **Search and Filter:** Search for specific words or phrases within transcripts.  
+- **Export Options:** Save transcripts in multiple formats (TXT, JSON, CSV).  
+- **Custom Styling:** Edit and format transcripts for better readability.  
+- **Multi-language Support:** Fetch and process transcripts in various languages.  
+- **Docker Support:** Easily deploy the tool in a Dockerized environment.  
+
+---
+
+### Tech Stack
+
+The project is built with the following technologies:
+
+- **Frontend:** TypeScript, JavaScript, CSS  
+- **Backend:** Node.js  
+- **Infrastructure:** Docker  
+- **YouTube Integration:** YouTube Data API  
+
+---
+
+## Installation
 
 ### Prerequisites
-- Node.js (>=14.x)
-- pnpm (>=6.x)
 
-### Installation
+Ensure you have the following installed:
+
+- **Node.js** (>= 16.x)  
+- **Docker** (>= 20.x) (optional for Dockerized setup)  
+- **YouTube Data API Key** (required for fetching transcripts)  
+
+### Setup Instructions
+
 1. Clone the repository:
-   ```sh
-   git clone https://github.com/githubnext/workspace-blank.git
-   cd workspace-blank
+
+   ```bash
+   git clone https://github.com/sisovin/youtube-transcript-tool.git
+   cd youtube-transcript-tool
    ```
 
 2. Install dependencies:
-   ```sh
-   pnpm install
+
+   ```bash
+   npm install
    ```
 
-3. Set up environment variables:
-   ```sh
-   cp .env.example .env
+3. Create a `.env` file in the root directory and add your YouTube Data API key:
+
+   ```env
+   YOUTUBE_API_KEY=your-youtube-api-key
    ```
 
-4. Build the project:
-   ```sh
-   pnpm build
+4. Run the application:
+
+   ```bash
+   npm start
    ```
 
-5. Start the development server:
-   ```sh
-   pnpm dev
-   ```
+5. Access the tool in your browser at `http://localhost:3000`.
 
-## API Endpoints
+---
 
-### User
-- `GET /api/users`: Get all users
-- `POST /api/users`: Create a new user
-- `GET /api/users/:id`: Get a user by ID
-- `PUT /api/users/:id`: Update a user by ID
-- `DELETE /api/users/:id`: Delete a user by ID
+## Usage
 
-### Transcript
-- `GET /api/transcripts`: Get all transcripts
-- `POST /api/transcripts`: Create a new transcript
-- `GET /api/transcripts/:id`: Get a transcript by ID
-- `PUT /api/transcripts/:id`: Update a transcript by ID
-- `DELETE /api/transcripts/:id`: Delete a transcript by ID
+### Fetching a Transcript
 
-## Component Documentation
+1. Enter the YouTube video URL in the provided input field.  
+2. Click the **Fetch Transcript** button.  
+3. View and interact with the transcript in the editor.
 
-### Button
-A reusable button component.
+### Searching and Filtering
 
-#### Props
-- `label` (string): The text to display on the button.
-- `onClick` (function): The function to call when the button is clicked.
+- Use the search bar to find specific words or phrases in the transcript.  
 
-### Input
-A reusable input component.
+### Exporting a Transcript
 
-#### Props
-- `value` (string): The value of the input.
-- `onChange` (function): The function to call when the input value changes.
+- Choose the desired format (TXT, JSON, or CSV) and click the **Export** button.
 
-## Development Guidelines
+---
 
-### Code Style
-- Follow the ESLint rules defined in the shared configuration.
-- Use Prettier for code formatting.
+## Contributing
 
-### Commit Messages
-- Use conventional commits for commit messages.
-- Example: `feat: add new user endpoint`
+We welcome contributions from the community! To contribute:
 
-### Branching Strategy
-- Use the `main` branch for production-ready code.
-- Create feature branches for new features and bug fixes.
-- Example: `feature/add-user-endpoint`
+1. Fork the repository.  
+2. Create a new branch for your feature or bugfix: `git checkout -b feature-name`.  
+3. Commit your changes: `git commit -m "Description of changes"`.  
+4. Push your branch: `git push origin feature-name`.  
+5. Open a Pull Request.  
 
-## Modules
+Please adhere to the [Code of Conduct](CODE_OF_CONDUCT.md).
 
-### Auth Module
-- [ ] Implement Argon2 password hashing
-- [ ] Create auth DTOs
-- [ ] Set up JWT strategy
-- [ ] Implement login/signup endpoints
-- [ ] Add session management
+---
 
-### Transcript Module
-- [ ] Create YouTube API service
-- [ ] Implement transcript fetching logic
-- [ ] Set up transcript DTOs
-- [ ] Add caching mechanism
-- [ ] Create rate limiting
+## License
 
-### User Module
-- [ ] Implement user CRUD operations
-- [ ] Add profile management
-- [ ] Set up user-transcript relations
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-### Shared Infrastructure
-- [ ] Create global exception filters
-- [ ] Set up request validation pipes
-- [ ] Implement logging interceptor
-- [ ] Configure API documentation (Swagger)
+---
 
-## Database
-- [ ] Design PostgreSQL schema
-- [ ] Set up migrations
-- [ ] Implement seed script for development
-- [ ] Configure production database connection
+## Support and Community
 
-## CI/CD
-- [ ] Set up linting/prettier in pipeline
-- [ ] Configure type checking in CI
-- [ ] Add testing pipeline
-- [ ] Set up deployment workflows
+- **Issues:** Report bugs or request features via [GitHub Issues](https://github.com/sisovin/youtube-transcript-tool/issues).  
+- **Discussions:** Join the [GitHub Discussions](https://github.com/sisovin/youtube-transcript-tool/discussions) to share ideas and ask questions.  
+- **Contact:** Reach out to the maintainers at [email@example.com](mailto:email@example.com).  
 
-## Testing
-- [ ] Write unit tests for frontend components
-- [ ] Add integration tests for API
-- [ ] Implement E2E test suite
-- [ ] Set up mocking for YouTube API
+---
